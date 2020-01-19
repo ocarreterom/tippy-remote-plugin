@@ -27,13 +27,12 @@
     "url": "https://github.com/ocarreterom/tippy-remote-plugin/issues"
   },
   "homepage": "https://github.com/ocarreterom/tippy-remote-plugin#readme",
-  "dependencies": {
-    "babel-eslint": "^10.0.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
+    "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0"
   }
 }
