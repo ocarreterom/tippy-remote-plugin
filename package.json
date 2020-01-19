@@ -1,6 +1,6 @@
 {
   "name": "tippy-remote-plugin",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Tippy.js plugin to load remote content.",
   "main": "dist/index.js",
   "scripts": {
