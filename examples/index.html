@@ -5,17 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@latest/themes/light-border.css"></link>
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.4.1/dist/css/bootstrap.css"></link>
   <script src="https://unpkg.com/popper.js@latest"></script>
   <script src="https://unpkg.com/tippy.js@latest"></script>
 </head>
 <body>
 
-  <a href="#" id="remote" data-src="./content.html">Google</a>
+  <div class="container my-4">
+    <h1 class="border-bottom pb-3 mb-3">tippy-remote-plugin</h1>
+    <h2>Basic usage</h2>
+    <a href="https://github.com/ocarreterom" id="basic" data-src="./content.html" target="_blank">@ocarreterom</a>
+  </div>
 
   <script type="module">
     import remote from '../dist/index.js'
 
-    tippy('#remote', {
+    tippy('#basic', {
+      theme: 'light-border',
+      interactive: true,
+      placement: 'bottom-start',
       plugins: [remote]
     })
   </script>
