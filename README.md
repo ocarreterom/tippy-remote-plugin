@@ -9,14 +9,17 @@ npm install tippy-remote-plugin
 ## Usage
 ### HTML
 ```html
-<a href="#" id="remoteContent" data-src="/remote-content.html">My popover</a>
+<a href="#" id="remote">My popover</a>
 ```
 ### JS
 ```js
 import remote from 'tippy-remote-plugin'
 
-tippy('#remoteContent', {
-  plugins: [remote]
+tippy('#remote', {
+  plugins: [remote],
+  remote: {
+    url: 'my-remote-content.html'
+  }
 })
 ```
 
