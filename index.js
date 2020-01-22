@@ -7,11 +7,11 @@ const remote = {
     const { remote } = instance.props
 
     return {
-      onCreate() {
-        state.isLoading = false;
+      onCreate () {
+        state.isLoading = false
         state.isLoaded = false
       },
-      
+
       onTrigger () {
         if (state.isLoaded || state.isLoading) return
 
@@ -26,7 +26,7 @@ const remote = {
             instance.setContent(content)
             state.isLoaded = true
           })
-          .catch(error => {
+          .catch(() => {
             state.isLoaded = false
           })
           .finally(() => {
