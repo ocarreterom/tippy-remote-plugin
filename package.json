@@ -19,8 +19,12 @@
     "url": "git+https://github.com/ocarreterom/tippy-remote-plugin.git"
   },
   "keywords": [
+    "tippy",
     "tippy.js",
-    "popper.js"
+    "popper",
+    "popper.js",
+    "popover",
+    "tooltip"
   ],
   "license": "MIT",
   "bugs": {
