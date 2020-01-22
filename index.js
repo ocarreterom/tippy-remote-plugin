@@ -1,25 +1,33 @@
 const remote = {
   name: 'remote',
+  defaultValue: {},
 
   fn (instance) {
+    const { state } = instance
+    const { remote } = instance.props
+
     return {
       onCreate() {
-        instance.state.isLoading = false
+        state.isLoading = false;
+        state.isLoaded = false
       },
       
-      onShow () {
-        const { state } = instance
-        if (state.isLoading) return
+      onTrigger () {
+        if (state.isLoaded || state.isLoading) return
 
-        const url = instance.reference.getAttribute('data-src')
+        const { url } = remote
         if (!url) return
 
         state.isLoading = true
 
         fetch(url)
-          .then(res => res.text())
+          .then(response => response.text())
           .then(content => {
             instance.setContent(content)
+            state.isLoaded = true
+          })
+          .catch(error => {
+            state.isLoaded = false
           })
           .finally(() => {
             state.isLoading = false

@@ -21,11 +21,18 @@
   <script type="module">
     import remote from '../dist/index.js'
 
-    tippy('#basic', {
-      theme: 'light-border',
+    const basicEl = document.querySelector('#basic')
+    const url = basicEl.getAttribute('data-src')
+
+    tippy(basicEl, {
+      flipOnUpdate: true,
       interactive: true,
       placement: 'bottom-start',
-      plugins: [remote]
+      plugins: [remote],
+      remote: {
+        url: url
+      },
+      theme: 'light-border'
     })
   </script>
 </body>
