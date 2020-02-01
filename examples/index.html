@@ -15,22 +15,35 @@
   <div class="container my-4">
     <h1 class="border-bottom pb-3 mb-3">tippy-remote-plugin</h1>
     <h2>Basic usage</h2>
-    <a href="https://github.com/ocarreterom" id="basic" data-src="./content.html" target="_blank">@ocarreterom</a>
+    <a href="https://github.com/ocarreterom" id="basic-example" target="_blank">@ocarreterom</a>
+
+    <h2>Content cache</h2>
+    <a href="https://github.com/ocarreterom" class="cache-example" target="_blank">@ocarreterom</a>
+    <a href="https://github.com/ocarreterom" class="cache-example" target="_blank">@ocarreterom</a>
   </div>
 
   <script type="module">
     import remote from '../dist/index.js'
 
-    const basicEl = document.querySelector('#basic')
-    const url = basicEl.getAttribute('data-src')
-
-    tippy(basicEl, {
+    tippy('#basic-example', {
       flipOnUpdate: true,
       interactive: true,
       placement: 'bottom-start',
       plugins: [remote],
       remote: {
-        url: url
+        url: 'content.html'
+      },
+      theme: 'light-border'
+    })
+
+    tippy('.cache-example', {
+      flipOnUpdate: true,
+      interactive: true,
+      placement: 'bottom-start',
+      plugins: [remote],
+      remote: {
+        url: 'content.html',
+        useCache: true
       },
       theme: 'light-border'
     })
