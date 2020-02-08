@@ -2,20 +2,20 @@ const remote = {
   name: 'remote',
   defaultValue: {},
 
-  fn (instance) {
-    const { state } = instance
-    const { remote } = instance.props
+  fn(instance) {
+    const {state} = instance
+    const {remote} = instance.props
 
     return {
-      onCreate () {
+      onCreate() {
         state.isLoading = false
         state.isLoaded = false
       },
 
-      onTrigger () {
+      onTrigger() {
         if (state.isLoaded || state.isLoading) return
 
-        const { url } = remote
+        const {url} = remote
         if (!url) return
 
         state.isLoading = true

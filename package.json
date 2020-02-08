@@ -7,7 +7,7 @@
     "clean": "rm -fr dist",
     "build": "babel index.js -d dist",
     "dev": "babel --watch index.js -d dist",
-    "lint": "standard --env browser",
+    "lint": "eslint index.js",
     "prepublishOnly": "npm run clean && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -33,9 +33,13 @@
   "homepage": "https://github.com/ocarreterom/tippy-remote-plugin#readme",
   "dependencies": {},
   "devDependencies": {
-    "@babel/cli": "^7.8.3",
-    "@babel/core": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
-    "standard": "^14.3.1"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1"
   }
 }
