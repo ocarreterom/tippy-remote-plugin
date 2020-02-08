@@ -14,10 +14,7 @@
 
   <div class="container my-4">
     <h1 class="border-bottom pb-3 mb-3">tippy-remote-plugin</h1>
-    <h2>Basic usage</h2>
-    <a href="https://github.com/ocarreterom" id="basic-example" target="_blank">@ocarreterom</a>
-
-    <h2>Content cache</h2>
+    <h2>Usage</h2>
     <a href="https://github.com/ocarreterom" class="cache-example" target="_blank">@ocarreterom</a>
     <a href="https://github.com/ocarreterom" class="cache-example" target="_blank">@ocarreterom</a>
   </div>
@@ -25,25 +22,13 @@
   <script type="module">
     import remote from '../dist/index.js'
 
-    tippy('#basic-example', {
-      flipOnUpdate: true,
-      interactive: true,
-      placement: 'bottom-start',
-      plugins: [remote],
-      remote: {
-        url: 'content.html'
-      },
-      theme: 'light-border'
-    })
-
     tippy('.cache-example', {
       flipOnUpdate: true,
       interactive: true,
       placement: 'bottom-start',
       plugins: [remote],
       remote: {
-        url: 'content.html',
-        useCache: true
+        url: 'content.html'
       },
       theme: 'light-border'
     })

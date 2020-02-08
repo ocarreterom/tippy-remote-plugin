@@ -17,11 +17,11 @@ const remote = {
       onTrigger() {
         if (state.isLoaded || state.isLoading) return
 
-        const {url, useCache} = remote
+        const {url} = remote
         if (!url) return
 
         const {content} = cache.get(url) || {}
-        if (content && useCache) {
+        if (content) {
           instance.setContent(content)
           return
         }
@@ -33,9 +33,7 @@ const remote = {
           .then(content => {
             instance.setContent(content)
             state.isLoaded = true
-            if (useCache) {
-              cache.set(url, {content})
-            }
+            cache.set(url, {content})
           })
           .catch(() => {
             state.isLoaded = false
