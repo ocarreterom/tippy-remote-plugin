@@ -1,3 +1,5 @@
+const cache = new Map()
+
 const remote = {
   name: 'remote',
   defaultValue: {},
@@ -18,6 +20,12 @@ const remote = {
         const {url} = remote
         if (!url) return
 
+        const {content} = cache.get(url) || {}
+        if (content) {
+          instance.setContent(content)
+          return
+        }
+
         state.isLoading = true
 
         fetch(url)
@@ -25,6 +33,7 @@ const remote = {
           .then(content => {
             instance.setContent(content)
             state.isLoaded = true
+            cache.set(url, {content})
           })
           .catch(() => {
             state.isLoaded = false

@@ -7,11 +7,10 @@ npm install tippy-remote-plugin
 ```
 
 ## Usage
-### HTML
 ```html
 <a href="#" id="remote">My popover</a>
 ```
-### JS
+
 ```js
 import remote from 'tippy-remote-plugin'
 
@@ -23,5 +22,7 @@ tippy('#remote', {
 })
 ```
 
-## Goals
-- [ ] Cache content by url
+## Options
+| Name | Value    | Default     | Description                    |
+| ---- | -------- | ----------- | ------------------------------ |
+| url  | `string` | `undefined` | The URL to get remote content. |
