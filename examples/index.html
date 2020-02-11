@@ -19,21 +19,18 @@
   </style>
 </head>
 <body>
-  <a href="https://github.com/ocarreterom" class="remote-content" target="_blank">@ocarreterom</a>
-  <a href="https://github.com/ocarreterom" class="remote-content" target="_blank">@ocarreterom</a>
+  <a href="https://github.com/ocarreterom" data-tippy-remote="./partial-content.html" target="_blank">@ocarreterom</a>
+  <a href="https://github.com/ocarreterom" data-tippy-remote="./partial-content.html" target="_blank">@ocarreterom</a>
 
   <script type="module">
     // import remote from '../dist/index.js'
     import remote from 'https://unpkg.com/tippy-remote-plugin@latest'
 
-    tippy('.remote-content', {
+    tippy('[data-tippy-remote]', {
       flipOnUpdate: true,
       interactive: true,
       placement: 'bottom-start',
       plugins: [remote],
-      remote: {
-        url: './partial-content.html'
-      },
       theme: 'light-border'
     })
   </script>
