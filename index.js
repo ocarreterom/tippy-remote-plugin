@@ -1,12 +1,11 @@
 const cache = new Map()
 
-const remote = {
+const plugin = {
   name: 'remote',
-  defaultValue: {},
+  defaultValue: false,
 
   fn(instance) {
     const {state} = instance
-    const {remote} = instance.props
 
     return {
       onCreate() {
@@ -17,10 +16,10 @@ const remote = {
       onTrigger() {
         if (state.isLoaded || state.isLoading) return
 
-        const {url} = remote
-        if (!url) return
+        const src = instance.props.remote
+        if (!src) return
 
-        const {content} = cache.get(url) || {}
+        const {content} = cache.get(src) || {}
         if (content) {
           instance.setContent(content)
           return
@@ -28,12 +27,12 @@ const remote = {
 
         state.isLoading = true
 
-        fetch(url)
+        fetch(src)
           .then(response => response.text())
           .then(content => {
             instance.setContent(content)
             state.isLoaded = true
-            cache.set(url, {content})
+            cache.set(src, {content})
           })
           .catch(() => {
             state.isLoaded = false
@@ -46,4 +45,4 @@ const remote = {
   }
 }
 
-export default remote
+export default plugin
