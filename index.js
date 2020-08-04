@@ -27,7 +27,7 @@ const plugin = {
 
         state.isLoading = true
 
-        fetch(src)
+        fetch(src, {credentials: 'same-origin'})
           .then(response => response.text())
           .then(content => {
             instance.setContent(content)
