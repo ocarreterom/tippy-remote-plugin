@@ -40,6 +40,10 @@ const plugin = {
           .finally(() => {
             state.isLoading = false
           })
+      },
+
+      onDestroy() {
+        cache.delete(instance.props.remote)
       }
     }
   }
