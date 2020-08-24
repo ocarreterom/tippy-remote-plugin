@@ -4,22 +4,22 @@ const plugin = {
   name: 'remote',
   defaultValue: false,
 
-  fn(instance) {
-    const {state} = instance
+  fn (instance) {
+    const { state } = instance
 
     return {
-      onCreate() {
+      onCreate () {
         state.isLoading = false
         state.isLoaded = false
       },
 
-      onTrigger() {
+      onTrigger () {
         if (state.isLoaded || state.isLoading) return
 
         const src = instance.props.remote
         if (!src) return
 
-        const {content} = cache.get(src) || {}
+        const { content } = cache.get(src) || {}
         if (content) {
           instance.setContent(content)
           return
@@ -27,12 +27,12 @@ const plugin = {
 
         state.isLoading = true
 
-        fetch(src, {credentials: 'same-origin'})
+        fetch(src, { credentials: 'same-origin' })
           .then(response => response.text())
           .then(content => {
             instance.setContent(content)
             state.isLoaded = true
-            cache.set(src, {content})
+            cache.set(src, { content })
           })
           .catch(() => {
             state.isLoaded = false
@@ -42,7 +42,7 @@ const plugin = {
           })
       },
 
-      onDestroy() {
+      onDestroy () {
         cache.delete(instance.props.remote)
       }
     }
