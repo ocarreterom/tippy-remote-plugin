@@ -13,7 +13,7 @@ npm install tippy-remote-plugin
 ```
 
 ```js
-import tippy from 'tippy.js';
+import tippy from 'tippy.js'
 import remote from 'tippy-remote-plugin'
 
 tippy('#remote', {
@@ -23,9 +23,9 @@ tippy('#remote', {
 ```
 
 #### Options
-| Name   | Value               | Default | Description                    |
-| ------ | ------------------- | ------- | ------------------------------ |
-| remote | `string` \| `false` | `false` | The URL to get remote content. |
+| Name   | Default | Description                                                       |
+| ------ | ------- | ----------------------------------------------------------------- |
+| remote | `false` | The URL to get remote content. Possible values: `string`, `false` |
 
 ### With data attributes
 ```html
@@ -33,7 +33,7 @@ tippy('#remote', {
 ```
 
 ```js
-import tippy from 'tippy.js';
+import tippy from 'tippy.js'
 import remote from 'tippy-remote-plugin'
 
 tippy('[data-tippy-remote]', {
