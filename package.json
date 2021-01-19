@@ -44,7 +44,7 @@
     "@rollup/plugin-babel": "^5.2.2",
     "@rollup/plugin-node-resolve": "^11.0.1",
     "babel-eslint": "^10.0.3",
-    "es-dev-server": "^2.0.2",
+    "es-dev-server": "^2.1.0",
     "popper.js": "^1.16.1",
     "rollup": "^2.36.1",
     "rollup-plugin-replace": "^2.2.0",
