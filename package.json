@@ -42,7 +42,7 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@rollup/plugin-babel": "^5.2.2",
-    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^11.1.0",
     "babel-eslint": "^10.0.3",
     "es-dev-server": "^2.0.2",
     "popper.js": "^1.16.1",
