@@ -41,7 +41,7 @@
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
-    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-node-resolve": "^11.1.1",
     "babel-eslint": "^10.0.3",
     "es-dev-server": "^2.1.0",
