@@ -3,9 +3,9 @@ import babel from '@rollup/plugin-babel'
 import replace from 'rollup-plugin-replace'
 
 export default {
-  input: 'docs/index.js',
+  input: 'index.js',
   output: {
-    file: 'docs/bundle.js',
+    file: 'bundle.js',
     format: 'iife'
   },
   plugins: [

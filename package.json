@@ -5,15 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "npm run docs-watch & npm run serve",
-    "docs-build": "rollup -c",
-    "docs-watch": "rollup -c --watch",
     "lint": "standard --fix",
-    "serve": "es-dev-server --app-index docs/index.html --watch --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
-    "dist"
+    "index.js"
   ],
   "repository": {
     "type": "git",
@@ -32,24 +28,9 @@
     "url": "https://github.com/ocarreterom/tippy-remote-plugin/issues"
   },
   "homepage": "https://github.com/ocarreterom/tippy-remote-plugin#readme",
-  "dependencies": {},
-  "peerDependencies": {
-    "popper.js": "^1.0.0",
-    "tippy.js": "^5.0.0"
-  },
   "devDependencies": {
-    "@babel/cli": "^7.12.13",
-    "@babel/core": "^7.12.13",
-    "@babel/preset-env": "^7.12.13",
-    "@rollup/plugin-babel": "^5.2.3",
-    "@rollup/plugin-node-resolve": "^11.1.1",
     "babel-eslint": "^10.0.3",
-    "es-dev-server": "^2.1.0",
-    "popper.js": "^1.16.1",
-    "rollup": "^2.38.5",
-    "rollup-plugin-replace": "^2.2.0",
-    "standard": "^16.0.3",
-    "tippy.js": "^5.2.1"
+    "standard": "^16.0.3"
   },
   "standard": {
     "parser": "babel-eslint",
