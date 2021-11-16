@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "lint": "standard --fix",
+    "lint": "standard --fix index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
@@ -29,16 +29,12 @@
   },
   "homepage": "https://github.com/ocarreterom/tippy-remote-plugin#readme",
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "standard": "^16.0.3"
+    "standard": "^16.0.4"
+  },
+  "peerDependencies": {
+    "tippy.js": "^5 || ^6"
   },
   "standard": {
-    "parser": "babel-eslint",
-    "env": [
-      "browser"
-    ],
-    "ignore": [
-      "bundle.js"
-    ]
+    "env": "browser"
   }
 }
